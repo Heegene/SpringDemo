@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+  <display-name>Spring JavaConfig Sample</display-name>
+  <!--  디스패처서블릿을 프론트서블릿으로 등록하기 위한 설정 -->
+  <servlet>
+  	<servlet-name>mvc</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>contextClass</param-name>
+  		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+  	</init-param>
+  	
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>kr.or.connect.mvcexam.config.WebMvcContextConfiguration</param-value>
+		<!--  패키지명 꼭 포함해서 등록할 것  -->
+	</init-param>  
+	
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>mvc</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  	<!--  모든 요청에 대해 "mvc"라고 이름지어진 서블릿 실행 -->
+</web-app>
