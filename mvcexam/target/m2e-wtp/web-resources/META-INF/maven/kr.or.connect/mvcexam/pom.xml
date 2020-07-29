@@ -68,6 +68,20 @@
     	<version>1.2</version>
     </dependency>
     
+    <!-- api의 리턴값을 json 메세지로 반환하기 위한 dependency -->
+    <dependency>
+    	<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-core</artifactId>
+    	<version>2.10.2</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-databind</artifactId>
+    	<version>2.10.2</version>
+    </dependency>
+    
+    
   </dependencies>
 
   <build>
